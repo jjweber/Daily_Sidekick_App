@@ -1,0 +1,27 @@
+{
+  "name": "daily_sidekick_app",
+  "version": "1.0.0",
+  "description": "This app is a daily planner that allows the user to store and view their schedules. They can create to-do-lists, shopping lists, notes, and addresses.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjweber/Daily_Sidekick_App.git"
+  },
+  "author": "Justin Weber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjweber/Daily_Sidekick_App/issues"
+  },
+  "homepage": "https://github.com/jjweber/Daily_Sidekick_App#readme"
+}
