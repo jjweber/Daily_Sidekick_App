@@ -1,5 +1,123 @@
-html body {
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font: 1.6rem/1.25 "Helvetica Neue", arial, sans-serif;
+  font-size: 32px; }
+
+.wrapper {
   text-align: center; }
 
+.navbar-header img {
+  width: 100px;
+  height: 100px; }
+
 h1 {
-  color: blue; }
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem; }
+
+h2 {
+  background: #4D91BF;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 2rem 0; }
+
+h2:first-of-type {
+  margin-top: -2rem; }
+
+.wrapper h2 {
+  color: #FFF; }
+
+h3 {
+  font-size: 32px;
+  font-weight: bold; }
+
+.custom-icon {
+  width: 50px;
+  height: 50px; }
+
+#loginPage h1 {
+  color: #000;
+  text-transform: uppercase; }
+
+#loginPage img {
+  width: 300px;
+  height: 300px;
+  margin-top: 8rem; }
+
+#loginPage form input {
+  height: 4rem;
+  font-size: 32px; }
+
+#loginPage p {
+  color: #4D91BF;
+  padding-bottom: 2rem; }
+
+#loginBtn {
+  background: #4D91BF;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em; }
+
+#createBtn {
+  background: #9C9CA8;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em; }
+
+#login {
+  background: yellow; }
+
+#contactPage h3 {
+  background: #4D91BF;
+  color: #FFF;
+  padding: 2rem 0;
+  margin-top: -4.5rem; }
+
+#contactPage label, #contactPage input {
+  display: block;
+  height: 45px; }
+
+#contactPage label {
+  text-align: left; }
+
+.error {
+  color: #C30000;
+  line-height: 1.2;
+  margin: 5px auto; }
+
+input:focus:required:invalid {
+  background: #ffbfbf;
+  border-color: #900;
+  outline: none; }
+
+input:focus:invalid {
+  outline: none; }
+
+input:focus:valid {
+  background: #dff0d8;
+  border-color: #2ecc71; }
+
+/* This is our style for the valid fields*/
+input:valid {
+  border-color: #2ecc71;
+  background-color: #dff0d8; }
+
+input:focus:valid {
+  outline: none; }
+
+footer {
+  text-align: center;
+  margin-top: 15%;
+  padding: 2rem 0;
+  border-top: 3px solid #000; }

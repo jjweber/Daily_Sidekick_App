@@ -6,31 +6,233 @@
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>Run npm init to get package.json file.</title>
-    <link href="./css/main.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
     <header>
-      <p>Placeholder</p>
+      <h1>Home</h1>
     </header>
-    <nav>
-      <ul>
-        <li><a href="/html/home.html">Home</a></li>
-        <li><a href="/html/calendar.html">Calendar</a></li>
-        <li><a href="/html/addressbook.html">Addressbook</a></li>
-        <li><a href="/html/notes.html">Notes</a></li>
-        <li><a href="/html/myAccount.html">My Account</a></li>
-        <li><a href="/html/contact.html">Contact</a></li>
-        <li><a href="../index.html">Signout</a></li>
-      </ul>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Daily SideKick</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/html/home.html">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="/html/calendar.html">Calendar</a></li>
+            <li><a href="/html/addressbook.html">Addressbook</a></li>
+            <li><a href="/html/notes.html">Notes</a></li>
+            <li><a href="/html/myAccount.html">My Account</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+            <li><a href="../index.html">Signout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
-    <section id="mainContent">
+
+
+    <section id="homePage" class="container">
       <div class="wrapper">
-        <h1>Home</h1>
+
+        <!-- Side Sub-Navigation -->
+        <div class="well hidden-sm hidden-xs">
+          <nav>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="/html/home.html">Overview</a></li>
+              <li><a href="/html/calendar.html">Appointments</a></li>
+              <li><a href="/html/addressbook.html">To-Do's</a></li>
+              <li><a href="/html/notes.html">Shopping List</a></li>
+              <li><a href="/html/myAccount.html">Notes</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- This Section will be populated with content
+        based on selected sub-nav option and will change -->
+
+        <!-- Overview Content -->
+        <h2>Next Appointment Scheduled</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+        </form>
+        <p><a href=""></a>read more</p>
+
+        <h2>Next To-Do Task</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+        </form>
+        <p><a href=""></a>read more</p>
+
+        <h2>Next Item on Shopping List</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+        </form>
+        <p><a href=""></a>read more</p>
+
+        <h2>Saved Notes</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+        </form>
+        <p><a href=""></a>read more</p>
+
+
+        <!-- Appointment Content -->
+        <h2>Next Appointment Scheduled</h2>
+        <form class="" action="" method="post">
+          <label for="App1"></label>
+          <input type="text" name="App1" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+        <h2>Completed Tasks</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+
+        <!-- To-Do's Content -->
+        <h2>To-Do Tasks</h2>
+        <form class="" action="" method="post">
+          <label for="App1"></label>
+          <input type="text" name="App1" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+        <h2>Completed Tasks</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+
+        <!-- Shopping List Content -->
+        <h2>Shopping List</h2>
+        <form class="" action="" method="post">
+          <label for="App1"></label>
+          <input type="text" name="App1" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+        <h2>Completed Items</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+
+        <!-- Notes Content -->
+        <h2>Notes</h2>
+        <form class="" action="" method="post">
+          <label for="App1"></label>
+          <input type="text" name="App1" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+        <h2>Completed Notes</h2>
+        <form class="" action="" method="post">
+          <label for=""></label>
+          <input type="text" name="" value="">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+        </form>
+
+
+
+
+
+
       </div>
     </section>
     <footer>
       <p>Built by Justin Weber for Who knows what.</p>
     </footer>
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!--<script src="js/bootstrap.min.js"></script>-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</script>
   </body>
 </html>

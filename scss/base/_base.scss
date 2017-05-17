@@ -1,7 +1,176 @@
-html body {
+html { font-size: 62.5%; }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font: 1.6rem/1.25 $font-stack;
+  font-size: 32px;
+}
+
+.wrapper {
   text-align: center;
 }
 
+.navbar-header img {
+  width: 100px;
+  height: 100px;
+}
+
 h1 {
- color: blue;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  background: #4D91BF;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+h2:first-of-type {
+  margin-top: -2rem;
+}
+
+.wrapper h2 {
+  color: #FFF;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.custom-icon {
+  width: 50px;
+  height: 50px;
+}
+
+// Index.html Page Styles
+#loginPage h1 {
+ color: #000;
+ text-transform: uppercase;
+}
+
+#loginPage img {
+  width: 300px;
+  height: 300px;
+  margin-top: 8rem;
+}
+
+#loginPage form {
+
+  input {
+    height: 4rem;
+    font-size: 32px;
+  }
+}
+
+#loginPage p {
+  color: #4D91BF;
+  padding-bottom: 2rem;
+}
+
+#loginBtn {
+  background: #4D91BF;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em;
+
+}
+
+#createBtn {
+  background: #9C9CA8;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em;
+}
+
+#login {
+  background: yellow;
+}
+// Home.html Page Styles
+// id="homePage"
+
+// Calendar.html Page Styles
+// id="calendarPage"
+
+
+// Addressbook.html Page Styles
+// id="addressbookPage"
+
+
+// Notes.html Page Styles
+// id="notesPage"
+
+
+// MyAccount.html Page Styles
+// id="myAccountPage"
+
+
+// Contact.html Page Styles
+// id="contactPage"
+
+#contactPage h3 {
+  background: #4D91BF;
+  color: #FFF;
+  padding: 2rem 0;
+  margin-top: -4.5rem;
+}
+
+#contactPage label, #contactPage input {
+  display: block;
+  height: 45px;
+}
+
+#contactPage label {
+  text-align: left;
+}
+
+
+.error {
+  color: $error-accent;
+  line-height: 1.2;
+  margin: 5px auto;
+}
+
+input:focus:required:invalid {
+  background: $error-background;
+  border-color: $error-accent-border;
+  outline: none;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+input:focus:valid {
+  background: $success-accent;
+  border-color: $success-accent-border;
+}
+
+/* This is our style for the valid fields*/
+input:valid{
+  border-color: $success-accent-border;
+  background-color: $success-accent;
+}
+
+input:focus:valid {
+  outline: none;
+}
+
+
+// Footer Style
+footer {
+  text-align: center;
+  margin-top: 15%;
+  padding: 2rem 0;
+  border-top: 3px solid #000;
 }
