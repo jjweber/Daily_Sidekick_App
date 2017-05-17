@@ -12,7 +12,8 @@ body {
   font-size: 32px; }
 
 .wrapper {
-  text-align: center; }
+  text-align: center;
+  max-width: 90%; }
 
 .navbar-header img {
   width: 100px;
