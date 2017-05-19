@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>Daily Sidekick App.</title>
     <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/calendar.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   </head>
     <body>
     <header>
+      <img class="navbar-brand" src="./assets/logo.png" alt="Daily Sidekick Logo"></img>
       <h1>Calendar</h1>
     </header>
 
@@ -25,7 +27,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Daily SideKick</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,14 +45,214 @@
     </nav>
 
 
-    <section id="calendarPage">
-      <div class="wrapper">
+    <section id="calendarPage" class="container-fluid">
 
 
       <!-- Calendar w/Events -->
+      <section class="row">
+        <div class="Calendar table-responsive col-xs-12 col-md-6">
+          <table class="table" cellspacing="0" cellpadding="2" rules="all" title="Calendar" >
+            <tbody>
+              <tr>
+                <td colspan="7" >
+                  <table cellspacing="0" style="width:100%;border-collapse:collapse;">
+                    <tbody>
+                      <tr>
+                        <td style="width:15%;"><a href="javascript:void(0)" title="Go to the previous month">&lt;</a></td>
+                        <td align="center" style="width:70%;">March 2014</td><td align="right" style="width:15%;"><a href="javascript:void(0)">&gt;</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th align="center" abbr="Sunday" scope="col">Sun</th>
+                <th align="center" abbr="Monday" scope="col">Mon</th>
+                <th align="center" abbr="Tuesday" scope="col">Tue</th>
+                <th align="center" abbr="Wednesday" scope="col">Wed</th>
+                <th align="center" abbr="Thursday" scope="col">Thu</th>
+                <th align="center" abbr="Friday" scope="col">Fri</th>
+                <th align="center" abbr="Saturday" scope="col">Sat</th>
+              </tr>
+              <tr>
+                <td align="center" style="width:14%;">23
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">24
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">25
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">26
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">27
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">28
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">1
+                  <div class="Content">No event</div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="width:14%;">2
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">3
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">4
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">5
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">6
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">7
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">8
+                  <div class="Content">No event</div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="width:14%;">9
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">10
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">11
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">12
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">13
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">14
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">15
+                  <div class="Content">No event</div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="width:14%;">16
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">17
+                  <div class="gap"></div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Test-Event.aspx" title="Test Event">Test Event</a>
+                    </div>
+                  </div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
+                    </div>
+                  </div>
+                </td>
+                <td align="center" style="width:14%;">18
+                  <div class="gap"></div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Test-Event.aspx" title="Test Event">Test Event</a>
+                    </div>
+                  </div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
+                    </div>
+                  </div>
+                </td>
+                <td align="center" style="width:14%;">19
+                  <div class="gap"></div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
+                    </div>
+                  </div>
+                </td>
+                <td align="center" style="width:14%;">20
+                  <div class="gap"></div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
+                    </div>
+                  </div>
+                </td>
+                <td align="center" style="width:14%;">21
+                  <div class="gap"></div>
+                  <div class="dayEvent">
+                    <div class="inner">
+                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
+                    </div>
+                  </div>
+                </td>
+                <td align="center" style="width:14%;">22
+                  <div class="Content">No event</div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="width:14%;">23
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">24
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">25
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">26
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">27
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">28
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">29
+                  <div class="Content">No event</div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="width:14%;">30
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">31
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">1
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">2
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">3
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">4
+                  <div class="Content">No event</div>
+                </td>
+                <td align="center" style="width:14%;">5
+                  <div class="Content">No event</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-
-
+      <div id="calendar"></div>
       <!-- Saved Schedule for selected date -->
 
         <!-- Appointments -->
@@ -66,7 +267,6 @@
 
 
 
-      </div>
     </section>
     <footer>
       <p>Built by Justin Weber for Project and Portfolio IV.</p>
@@ -74,5 +274,7 @@
   <script type="text/javascript" src="./js/main.js"></script>
   <script src="./js/jquery-3.2.1.js"></script>
   <script src="./js/bootstrap.js"></script>
+  <script src="./js/jquery-calendar.js"></script>
+  <script src="./js/calendar.js"></script>
   </body>
 </html>

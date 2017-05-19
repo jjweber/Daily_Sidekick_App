@@ -1,55 +1,98 @@
 html { font-size: 62.5%; }
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
   font: 1.6rem/1.25 $font-stack;
-  font-size: 32px;
 }
 
-.wrapper {
-  text-align: center;
-  max-width: 90%;
+.navbar {
+  font-size: 16px;
 }
 
-.navbar-header img {
+@media only screen and (min-width : 826px) {
+  .navbar {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width : 826px) {
+  .navbar {
+    font-size: 20px;
+  }
+}
+
+header img {
   width: 100px;
   height: 100px;
 }
 
-h1 {
-  font-size: 42px;
+header h1 {
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 h2 {
   background: #4D91BF;
-  font-size: 35px;
   font-weight: bold;
   padding: 2rem 0;
 }
 
 h2:first-of-type {
-  margin-top: -2rem;
+  margin-top: 0;
 }
 
-.wrapper h2 {
-  color: #FFF;
+section {
+  text-align: center;
+
+  h2 {
+    color: #FFF;
+    font-size: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 27px;
   font-weight: bold;
+}
+
+@media only screen and (min-width : 460px) {
+  header h1 {
+    font-size: 42px;
+    padding-bottom: 1rem;
+  }
+
+  section h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
 }
 
 .custom-icon {
   width: 50px;
   height: 50px;
+}
+
+.readMoreBtn {
+  background: #4D91BF;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 // Index.html Page Styles
@@ -106,24 +149,277 @@ h3 {
 
 // Addressbook.html Page Styles
 // id="addressbookPage"
+#addressbookPage {
+  @extend %reset-all-space;
+  background: #4D91BF;
+}
 
+#addressbookPage .row {
+  margin-right: 0;
+}
+
+#contactListSection {
+  width: calc(100% + 40px);
+}
+
+#contactList {
+  background: #4D91BF;
+  width: calc(100% + 55px);
+  min-height: 40rem;
+  float: left;
+  z-index: 999;
+  margin: 2rem 0 2rem -40px;
+
+  li {
+    background: #FFF;
+    width: 100%;
+    text-transform: capitalize;
+    text-align: left;
+    list-style: none;
+    padding: 2rem 0 2rem 1.5rem;
+    border: 1px solid black;
+
+    span {
+      float: left;
+      margin: -1rem 1.5rem 0 0;
+    }
+  }
+}
+
+#contactList li:last-of-type {
+  position: relative;
+}
+
+
+@media only screen and (min-width : 992px) {
+  #contactList {
+    margin: 2rem 0;
+    float: left;
+    width: 100%;
+
+    li {
+      width: calc(85% + 40px);
+      padding: 2rem 0 2rem 1.5rem;
+
+      span {
+        float: left;
+        margin: -1rem 1.5rem 0 0;
+      }
+    }
+  }
+}
+
+#searchArea1 {
+  background: #4D91BF;
+  width: calc(100% - 30px);
+  padding: 0 15px 0 0;
+  margin: 2rem 0 2rem 3.5%;
+}
+
+#searchInput {
+  padding-right: 0px;
+}
+
+#searchArea2 {
+  background: #4D91BF;
+  margin: 0 0 0 0;
+}
+
+
+#searchContacts1 .input-group {
+  width: calc(100% + 30px);
+}
+
+
+#searchContacts1 input,
+#searchContacts2 input {
+  height: 50px;
+}
+
+@media only screen and (min-width : 720px) {
+  #searchArea2 {
+    margin: 2rem 0 2rem 0;
+  }
+}
+
+#addressbookPage .addBtn button {
+  background: url("/assets/add-icon.png")no-repeat center center;
+  background-size: contain;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+#smallScreenAdd button {
+  margin: 0 15px 0 -44px;
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#largeScreenAdd button {
+  margin: 0 15px 0 -44px;
+}
+
+#contactInfoSection {
+  background: #4D91BF;
+  float: left;
+
+  #circle {
+    clear: both;
+  	width: 150px;
+  	height: 150px;
+  	background: #EEE;
+  	border-radius: 75px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    background: url("/assets/edit-icon.png")no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: -90px -200px 0 0;
+  }
+}
+
+@media only screen and (min-width : 720px) {
+  #circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+
+  #contactInfoSection .btn {
+    width: 45px;
+    height: 45px;
+    margin: -95px -205px 0 0;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  #contactInfoSection {
+    margin-left: -15px;
+
+    #circle {
+    	width: 225px;
+    	height: 225px;
+      border-radius: 112.5px;
+    }
+
+    .btn {
+      width: 50px;
+      height: 50px;
+      margin: -100px -290px 0 0;
+    }
+  }
+}
+
+#contactName label,
+#contactName input,
+#contactPhone label,
+#contactPhone input {
+  display: block;
+  height: 45px;
+}
+
+#contactName label,
+#contactPhone label,
+#contactEmail label {
+  text-align: left;
+}
+
+#contactName input,
+#contactPhone input {
+  width: 100%;
+}
+
+#contactEmail label, #contactEmail input {
+  display: block;
+  height: 45px;
+  width: 100%;
+}
+
+#contactEmail input {
+  margin-bottom: 50px;
+}
 
 // Notes.html Page Styles
 // id="notesPage"
+#notesPage {
+  @extend %reset-all-space;
+}
 
+#savedNotes {
+  width: 100%;
+  margin: -1rem 0 0 -4rem;
+
+  li {
+    width: calc(100% + 40px);
+    text-transform: capitalize;
+    text-align: left;
+    list-style: none;
+    padding: 2rem 0 2rem 1.5rem;
+    border-bottom: 1px solid black;
+
+    span {
+      float: right;
+      margin: -1rem 1.5rem 0 0;
+    }
+  }
+}
 
 // MyAccount.html Page Styles
 // id="myAccountPage"
+#myAccountPage {
+  @extend %reset-all-space;
+}
+
+#settingsList {
+  width: 100%;
+  margin: -1rem 0 0 -4rem;
+
+  li {
+    width: calc(100% + 40px);
+    text-transform: capitalize;
+    text-align: left;
+    list-style: none;
+    padding: 2rem 0 2rem 1.5rem;
+    border-bottom: 1px solid black;
+
+    span {
+      float: right;
+      margin: -1rem 1.5rem 0 0;
+    }
+  }
+}
+
 
 
 // Contact.html Page Styles
 // id="contactPage"
+
+#contactPage {
+  //@extend %reset-all-space;
+}
+
+#contactUs {
+  padding-bottom: 25px;
+
+  p {
+    text-align: left;
+  }
+}
 
 #contactPage h3 {
   background: #4D91BF;
   color: #FFF;
   padding: 2rem 0;
   margin-top: -4.5rem;
+  @extend %remove-bootstrap-side-padding;
 }
 
 #contactPage label, #contactPage input {
@@ -133,6 +429,11 @@ h3 {
 
 #contactPage label {
   text-align: left;
+
+  span {
+    font-size: 20px;
+    color: #CC1600;
+  }
 }
 
 
@@ -168,10 +469,42 @@ input:focus:valid {
 }
 
 
+
+
 // Footer Style
 footer {
   text-align: center;
-  margin-top: 15%;
+  //margin-top: 15%;
   padding: 2rem 0;
   border-top: 3px solid #000;
+  font-size: 20px;
 }
+
+
+
+
+
+
+
+
+
+.Calendar { margin-bottom: 2em; width: 800px; margin: 20px auto; }
+.Calendar table{ width: 100% }
+.Calendar > table{ border: 1px solid #d9d9d9; boder-bottom-width: 3px; }
+.Calendar table th{ font-size: 12px; text-transform: uppercase; font-weight: 100; background: #f7f7f7;}
+.Calendar table tr th:first-child, .Calendar table th:last-child{ background: #fffceb; }
+.Calendar table td{ width: 14%; height: 120px; vertical-align: top; text-align: left; color: #ccc;}
+.Calendar table tr:first-child td, .Calendar table table td{ width: auto; height: auto; text-align: inherit;}
+.Calendar table tr:first-child td{ background: #e6e6e6 !important; color: #000; }
+.Calendar table tr td:first-child, .Calendar table tr td:last-child{ background: #fffef9; }
+.Calendar table table td[align="right"]{ text-align: right; }
+.Calendar table table td[align="center"]{ text-align: center; }
+.Calendar table .Content{ color: #555; font-size: 12px;}
+.Calendar .dayEvent,.Calendar .selectedEvent{ margin-bottom: 2px; }
+.Calendar .dayEvent a,
+.Calendar .selectedEvent a{ padding: 2px 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; border-width: 1px; border-style: solid; display: block; font-size: 12px; }
+.Calendar .dayEvent a:hover, .Calendar .selectedEvent a:hover{ text-decoration: none; }
+.Calendar .dayEvent a{ background: #4596cb; border-color: #4596cb; color: #fff; }
+.Calendar .dayEvent a:hover{ background: #4d9dda; }
+.Calendar .selectedEvent a{ background: #f0730b; border-color: #f0730b; color: #fff; }
+.Calendar .selectedEvent a:hover{ background: #cf640a; border-color: #f0730b;}

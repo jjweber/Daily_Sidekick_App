@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>Daily Sidekick App</title>
     <link href="./css/main.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   </head>
   <body>
     <header>
+      <img class="navbar-brand" src="./assets/logo.png" alt="Daily Sidekick Logo"></img>
       <h1>Contact</h1>
     </header>
 
@@ -25,7 +26,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Daily SideKick</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,34 +44,19 @@
     </nav>
 
 
-    <section id="contactPage">
-      <div class="wrapper">
+    <section id="contactPage" class="container-fluid">
 
-        <!--/////////////////////////////////////////////-->
-        <!-- Contact Us Section -->
-        <!--/////////////////////////////////////////////-->
+      <!--/////////////////////////////////////////////-->
+      <!-- Contact Us Section -->
+      <!--/////////////////////////////////////////////-->
+      <section id="contactUs">
         <h2>Contact Us</h2>
 
         <!-- Contact Info -->
-        <table>
-          <tr>
-            <td>Call:</td>
-            <td>(704) 905-6547</td>
-          </tr>
+        <p>Call: <span>(704) 905-6547</span></p>
+        <p>Email: <span>jjweber@fullsail.edu</span></p>
 
-          <tr>
-            <td>Email:</td>
-            <td>jjweber@fullsail.edu</td>
-          </tr>
-        </table>
-
-        <!-- <div class="asideContents">
-              <p>Have questions or concerns? Reach out to us directly.</p>
-              <p><span><img class="phoneIcon" src="./assets/phone.svg" alt="Phone icon"></span>555.555.5555</p>
-              <p><span><img class="emailIcon"src="./assets/email.svg" alt="Email icon"></span>contact@formdemo.com</p>
-            </div>
-        -->
-
+      </section>
 
         <!--/////////////////////////////////////////////-->
         <!-- Message Form Section -->
@@ -92,20 +77,24 @@
             </div>
           </div>
           <div class="form-group row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-6">
               <label for="inputMessage">Message <span>*required</span></label>
-              <input type="text" class="form-control" id="inputMessage" placeholder="Email">
+              <textarea class="form-control" rows="3" name="inputMessage"></textarea>
+
+              <div class="col-sm-12 col-md-6">
+                <!--<div class="col-sm-6 col-md-3">-->
+                  <!-- Send Button -->
+                  <button type="submit" class="btn btn-lg btn-success">send</button>
+                <!--</div>-->
+                <!--<div class="col-sm-6 col-md-3">-->
+                  <!-- Clear Button -->
+                  <button type="submit" class="btn btn-lg btn-danger">clear</button>
+                <!--</div>-->
+              </div>
             </div>
           </div>
 
-          <!-- Send Button -->
-          <button type="submit" class="btn btn-default">send</button>
-
-          <!-- Clear Button -->
-          <button type="button" name="clear">clear</button>
         </form>
-
-      </div>
     </section>
     <footer>
       <p>Built by Justin Weber for Project and Portfolio IV.</p>

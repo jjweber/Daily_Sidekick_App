@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>Daily Sidekick App.</title>
     <link href="./css/main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   </head>
   <body>
     <header>
+      <img class="navbar-brand" src="./assets/logo.png" alt="Daily Sidekick Logo"></img>
       <h1>Notes</h1>
     </header>
 
@@ -25,7 +26,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Daily SideKick</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,8 +44,7 @@
     </nav>
 
 
-    <section id="notesPage">
-      <div class="wrapper">
+    <section id="notesPage" class="container-fluid">
 
         <!--/////////////////////////////////////////////-->
         <!-- New Note Section -->
@@ -54,13 +53,13 @@
 
         <!-- New note text input -->
         <form class="" action="" method="post">
-          <label for=""></label>
-          <input type="text" name="" value="">
+          <label for="inputMessage">Message <span>*required</span></label>
+          <textarea class="form-control" rows="12" name="inputMessage"></textarea>
         </form>
 
         <!-- New Note Buttons -->
-        <button type="button" name="saveBtn">save</button>
-        <button type="button" name="clearBtn">clear</button>
+        <button type="submit" class="btn btn-lg btn-success">send</button>
+        <button type="submit" class="btn btn-lg btn-danger">clear</button>
 
         <!--/////////////////////////////////////////////-->
         <!-- Saved Notes List -->
@@ -68,21 +67,17 @@
         <h2>Saved Notes</h2>
 
         <!-- List of saved notes from notes array -->
-        <ul>
-          <li>placeholders</li>
-          <li>placeholders</li>
+        <!-- Settings List with icons-->
+        <ul id="savedNotes">
+          <li>Change Name <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>
+          <li>Change Password <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>
         </ul>
-
-        <!-- Edit Icons -->
-        <img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon">
-        <img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon">
 
         <!-- Read More block that expands to display more -->
         <!-- Will only be visible on small and medium screens -->
-        <p><button type="button" name="readMore">read more</button></p>
+        <button class="readMoreBtn" type="button" name="readMore">read more</button>
 
 
-      </div>
     </section>
     <footer>
       <p>Built by Justin Weber for Project and Portfolio IV.</p>

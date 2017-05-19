@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <title>Daily Sidekick App</title>
     <link href="./css/main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   </head>
   <body>
     <header>
+      <img class="navbar-brand" src="./assets/logo.png" alt="Daily Sidekick Logo"></img>
       <h1>My Account</h1>
     </header>
 
@@ -25,7 +26,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Daily SideKick</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,38 +45,21 @@
 
 
     <section id="myAccountPage">
-      <div class="wrapper">
 
         <!-- Greeting -->
         <h2>Hello <span>name of user</span></h2>
 
 
-        <!-- Settings -->
-        <ul>
-          <li>Change Name</li>
-          <li>Change Password</li>
-          <li>Clear Completed Info</li>
-          <li>Click Sound On Press</li>
+        <!-- Settings List with icons-->
+        <ul id="settingsList">
+          <li>Change Name <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>
+          <li>Change Password <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>
+          <li>Clear Completed Info <span><img class="custom-icon" src="./assets/trash-icon.png" alt="Trash Can Icon"></span></li>
+          <li>Click Sound On Press <span><img class="custom-icon" src="./assets/trash-icon.png" alt="Trash Can Icon"></span></li>
         </ul>
 
-        <!-- Setting Controls -->
-
-        <!-- Setting 1 Edit Icon -->
-        <img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon">
-
-        <!-- Setting 2 Edit Icon -->
-        <img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon">
-
-        <!-- Setting 3 Trash Icon -->
-        <img class="custom-icon" src="./assets/trash-icon.png" alt="Trash Can Icon">
-
-        <!-- Setting 4 Toggle Switch -->
 
 
-
-
-
-      </div>
     </section>
     <footer>
       <p>Built by Justin Weber for Project and Portfolio IV.</p>
