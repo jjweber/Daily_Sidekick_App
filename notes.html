@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <title>Daily Sidekick App.</title>
-    <link href="./css/main.css" rel="stylesheet" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link href="./css/main.css" rel="stylesheet"/>
+
   </head>
   <body>
+
     <header>
       <img class="navbar-brand" src="./assets/logo.png" alt="Daily Sidekick Logo"></img>
       <h1>Notes</h1>
@@ -33,7 +39,6 @@
           <ul class="nav navbar-nav">
             <li><a href="home.html">Home</a></li>
             <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="addressbook.html">Addressbook</a></li>
             <li class="active"><a href="notes.html">Notes <span class="sr-only">(current)</span></a></li>
             <li><a href="myAccount.html">My Account</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -46,44 +51,46 @@
 
     <section id="notesPage" class="container-fluid">
 
-        <!--/////////////////////////////////////////////-->
-        <!-- New Note Section -->
-        <!--/////////////////////////////////////////////-->
-        <h2>New Notes</h2>
+      <!--/////////////////////////////////////////////-->
+      <!-- New Note Section -->
+      <!--/////////////////////////////////////////////-->
+      <h2>New Notes</h2>
 
-        <!-- New note text input -->
-        <form class="" action="" method="post">
-          <label for="inputMessage">Message <span>*required</span></label>
-          <textarea class="form-control" rows="12" name="inputMessage"></textarea>
-        </form>
+      <!-- New note text input -->
+      <form class="" action="" method="post">
+        <label for="inputMessage">Create Message</label>
+        <textarea class="form-control" rows="12" id="inputMessage" name="inputMessage"></textarea>
+      </form>
 
-        <!-- New Note Buttons -->
-        <button type="submit" class="btn btn-lg btn-success">send</button>
-        <button type="submit" class="btn btn-lg btn-danger">clear</button>
+      <!-- New Note Buttons -->
+      <button id="add" type="submit" class="btn btn-lg btn-success">send</button>
+      <button id="clear" type="submit" class="btn btn-lg btn-danger">clear</button>
 
-        <!--/////////////////////////////////////////////-->
-        <!-- Saved Notes List -->
-        <!--/////////////////////////////////////////////-->
-        <h2>Saved Notes</h2>
+      <!--/////////////////////////////////////////////-->
+      <!-- Saved Notes List -->
+      <!--/////////////////////////////////////////////-->
+      <h2>Saved Notes</h2>
 
-        <!-- List of saved notes from notes array -->
-        <!-- Settings List with icons-->
-        <ul id="savedNotes">
-          <li>Change Name <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>
-          <li>Change Password <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>
-        </ul>
+      <!-- List of saved notes from notes array -->
+      <!-- Settings List with icons-->
+      <p id="no-notes-message">No current notes</p>
 
-        <!-- Read More block that expands to display more -->
-        <!-- Will only be visible on small and medium screens -->
-        <button class="readMoreBtn" type="button" name="readMore">read more</button>
+      <ul id="savedNotes">
+        <!--<li>Change Name <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>-->
+      </ul>
 
+      <!-- Creating empty area to add color and styles -->
+      <div class="empty-space"></div>
 
     </section>
+
     <footer>
-      <p>Built by Justin Weber for Project and Portfolio IV.</p>
+      <p>Built by Justin Weber for Project and Portfolio IV Class.</p>
     </footer>
-  <script type="text/javascript" src="./js/main.js"></script>
+
   <script src="./js/jquery-3.2.1.js"></script>
   <script src="./js/bootstrap.js"></script>
+
+  <script type="text/javascript" src="./js/notes.js"></script>
   </body>
 </html>

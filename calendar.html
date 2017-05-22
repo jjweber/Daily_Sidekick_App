@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- If using this local comment out this meta. This is to handle Mixed content error on github page. -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <title>Daily Sidekick App.</title>
-    <link href="./css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/calendar.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="css/monthly.css">
+    <link href="./css/main.css" rel="stylesheet" />
+
   </head>
-    <body>
+  <body>
+
     <header>
       <img class="navbar-brand" src="./assets/logo.png" alt="Daily Sidekick Logo"></img>
       <h1>Calendar</h1>
@@ -34,7 +41,6 @@
           <ul class="nav navbar-nav">
             <li><a href="home.html">Home</a></li>
             <li class="active"><a href="calendar.html">Calendar <span class="sr-only">(current)</span></a></li>
-            <li><a href="addressbook.html">Addressbook</a></li>
             <li><a href="notes.html">Notes</a></li>
             <li><a href="myAccount.html">My Account</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -44,237 +50,86 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-
     <section id="calendarPage" class="container-fluid">
 
 
-      <!-- Calendar w/Events -->
-      <section class="row">
-        <div class="Calendar table-responsive col-xs-12 col-md-6">
-          <table class="table" cellspacing="0" cellpadding="2" rules="all" title="Calendar" >
-            <tbody>
-              <tr>
-                <td colspan="7" >
-                  <table cellspacing="0" style="width:100%;border-collapse:collapse;">
-                    <tbody>
-                      <tr>
-                        <td style="width:15%;"><a href="javascript:void(0)" title="Go to the previous month">&lt;</a></td>
-                        <td align="center" style="width:70%;">March 2014</td><td align="right" style="width:15%;"><a href="javascript:void(0)">&gt;</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <th align="center" abbr="Sunday" scope="col">Sun</th>
-                <th align="center" abbr="Monday" scope="col">Mon</th>
-                <th align="center" abbr="Tuesday" scope="col">Tue</th>
-                <th align="center" abbr="Wednesday" scope="col">Wed</th>
-                <th align="center" abbr="Thursday" scope="col">Thu</th>
-                <th align="center" abbr="Friday" scope="col">Fri</th>
-                <th align="center" abbr="Saturday" scope="col">Sat</th>
-              </tr>
-              <tr>
-                <td align="center" style="width:14%;">23
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">24
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">25
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">26
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">27
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">28
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">1
-                  <div class="Content">No event</div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="width:14%;">2
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">3
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">4
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">5
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">6
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">7
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">8
-                  <div class="Content">No event</div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="width:14%;">9
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">10
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">11
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">12
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">13
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">14
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">15
-                  <div class="Content">No event</div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="width:14%;">16
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">17
-                  <div class="gap"></div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Test-Event.aspx" title="Test Event">Test Event</a>
-                    </div>
-                  </div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
-                    </div>
-                  </div>
-                </td>
-                <td align="center" style="width:14%;">18
-                  <div class="gap"></div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Test-Event.aspx" title="Test Event">Test Event</a>
-                    </div>
-                  </div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
-                    </div>
-                  </div>
-                </td>
-                <td align="center" style="width:14%;">19
-                  <div class="gap"></div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
-                    </div>
-                  </div>
-                </td>
-                <td align="center" style="width:14%;">20
-                  <div class="gap"></div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
-                    </div>
-                  </div>
-                </td>
-                <td align="center" style="width:14%;">21
-                  <div class="gap"></div>
-                  <div class="dayEvent">
-                    <div class="inner">
-                      <a href="/Events/Second-Event.aspx" title="Second Event">Second Event</a>
-                    </div>
-                  </div>
-                </td>
-                <td align="center" style="width:14%;">22
-                  <div class="Content">No event</div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="width:14%;">23
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">24
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">25
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">26
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">27
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">28
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">29
-                  <div class="Content">No event</div>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="width:14%;">30
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">31
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">1
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">2
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">3
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">4
-                  <div class="Content">No event</div>
-                </td>
-                <td align="center" style="width:14%;">5
-                  <div class="Content">No event</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <div id="calendar"></div>
-      <!-- Saved Schedule for selected date -->
-
-        <!-- Appointments -->
-
-        <!-- To-Do's -->
-
-        <!-- Shopping List -->
-
-        <!-- Notes -->
+      <!-- Created Add Event btn to trigger add event modal -->
+      <div class="row text-center">
+        <button id="add-event-btn"type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addEventModal">Add Event</button>
+      </div>
 
 
+      <div id="calender-wrapper"class="container">
 
+        <!-- Creating div to hold the Calendar object  -->
+        <div class="monthly" id="mycalendar"></div>
+
+      </div>
 
 
     </section>
     <footer>
-      <p>Built by Justin Weber for Project and Portfolio IV.</p>
+      <p>Built by Justin Weber for Project and Portfolio IV Class.</p>
     </footer>
-  <script type="text/javascript" src="./js/main.js"></script>
-  <script src="./js/jquery-3.2.1.js"></script>
-  <script src="./js/bootstrap.js"></script>
-  <script src="./js/jquery-calendar.js"></script>
-  <script src="./js/calendar.js"></script>
+
+    <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Create New Event</h4>
+          </div>
+          <div class="modal-body">
+
+            <div class="row">
+              <div class='col-sm-12'>
+
+                <form class="form-horizontal">
+                  <div class="different form-group">
+                    <label for="event-info" class="col-sm-2 control-label">Title:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="event-info" name="Title" placeholder="Event Title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="new-event-start-date" class="lSideLabel col-sm-2 control-label">Start Date:</label>
+                    <div class="col-xs-4">
+                      <input type="date" class="lSideInput form-control" id="new-event-start-date" name="Start-Date">
+                    </div>
+                    <label for="new-event-end-date" class="rSideLabel col-sm-2 control-label">End Date:</label>
+                    <div class="col-xs-4">
+                      <input type="date" class="rSideInput form-control" id="new-event-end-date" name="End-Date">
+                    </div>
+                  </div>
+                  <div class="same form-group">
+                    <label for="new-event-start-time" class="lSideLabel col-sm-2 control-label">Start Time:</label>
+                    <div class="col-xs-4">
+                      <input type="time" class="lSideInput form-control" id="new-event-start-time" name="Start-Time">
+                    </div>
+                    <label for="new-event-end-time" class="rSideLabel col-sm-2 control-label">End Time:</label>
+                    <div class="col-xs-4">
+                      <input type="time" class="rSideInput form-control" id="new-event-end-time" name="End-Time">
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary add-new-event-btn">Save Event</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="./js/monthly.js"></script>
+
+    <script type="text/javascript" src="./js/custom-calendar-controls.js"></script>
   </body>
 </html>

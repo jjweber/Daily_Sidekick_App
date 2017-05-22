@@ -10,9 +10,9 @@
     <title>Daily Sidekick App</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-    <link href="./css/list-functions.css" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+		<link href="./css/list-functions.css" rel="stylesheet" />
+		<link href="./css/main.css" rel="stylesheet"/>
 
     <!-- Roboto font embed -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
@@ -59,8 +59,8 @@
       <aside id="sm-screen-sub-nav" class="hidden-sm hidden-md hidden-lg">
         <nav>
           <ul class="nav nav-pills">
-            <li class="active"><a href="./home.html" >Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="./Appointments.html">Appointments</a></li>
+            <li><a href="./home.html" >Overview</a></li>
+            <li class="active"><a href="./Appointments.html">Appointments <span class="sr-only">(current)</span></a></li>
             <li><a href="./ToDoList.html">To Do's</a></li>
             <li><a href="./ShoppingList.html">Shopping List</a></li>
             <li><a href="./NotesList.html">Notes</a></li>
@@ -68,12 +68,12 @@
         </nav>
       </aside>
 
-      <!-- Side Sub-Navigation -->
+      <!-- Medium & Large Sreen Side Sub-Navigation -->
       <aside id="side-nav-bar" class="hidden-xs">
         <nav>
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="./home.html" >Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="./Appointments.html">Appointments</a></li>
+            <li><a href="./home.html" >Overview</a></li>
+            <li class="active"><a href="./Appointments.html">Appointments <span class="sr-only">(current)</span></a></li>
             <li><a href="./ToDoList.html">To Do's</a></li>
             <li><a href="./ShoppingList.html">Shopping List</a></li>
             <li><a href="./NotesList.html">Notes</a></li>
@@ -81,21 +81,42 @@
         </nav>
       </aside>
 
-      <div id="all-list-content">
-        <!-- Overview Content -->
-        <section id="overview-list-content"class="container-fluid">
+      <div>
+        <div id="all-list-content">
 
-          <div class="jumbotron">
-            <h1>Daily Sidekick</h1>
-            <p>Daily Sidekick allows you to track all your daily activities.</p>
-            <p><a class="btn btn-primary btn-lg" href="contact.html" role="button">Contact Us</a></p>
-          </div>
+          <!-- Appointment Content -->
+          <section id="appointment-list-content" class="container-fluid">
+          <h1>Appointments</h1>
+            <div class="list-head">
+              <input type="text" placeholder="Enter an activity.." id="item">
+              <button id="add">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <circle style="fill:#43B05C;" cx="25" cy="25" r="25"/>
+                  <line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25" y1="13" x2="25" y2="38"/>
+                  <line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="37.5" y1="25" x2="12.5" y2="25"/>
+                </svg>
+              </button>
+            </div>
 
-        </section>
+            <div class="listContentContainer container">
+              <div class="contentList container">
+
+                <!-- Uncompleted tasks -->
+                <h2>Uncompleted Appointments</h2>
+                <ul class="todo" id="todo"></ul>
+              </div>
+
+              <div class="contentList container">
+
+                <!-- Completed tasks -->
+                <h2>Completed Appointments</h2>
+                <ul class="todo" id="completed"></ul>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-
     </section>
-
     <footer>
       <p>Built by Justin Weber for Project and Portfolio IV Class.</p>
     </footer>
@@ -103,7 +124,7 @@
   <script src="./js/jquery-3.2.1.js"></script>
   <script src="./js/bootstrap.js"></script>
 
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/appointments.js"></script>
 
 
   </body>
