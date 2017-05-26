@@ -31,7 +31,6 @@ document.getElementById('item').addEventListener('keydown', function (e) {
 });
 
 function addItem (value) {
-  console.log("Adding item with value: ", value);
   addItemToDOM(value);
   document.getElementById('item').value = '';
 
@@ -111,11 +110,11 @@ function completeItem(dataStore) {
   var value = item.innerText;
 
   if (id === 'todo') {
-    toDoData.todo.splice(toDoData.todo.indexOf(value), 1);
-    toDoData.completed.push(value);
+    data.todo.splice(data.todo.indexOf(value), 1);
+    data.completed.push(value);
   } else {
-    toDoData.completed.splice(toDoData.completed.indexOf(value), 1);
-    toDoData.todo.push(value);
+    data.completed.splice(data.completed.indexOf(value), 1);
+    data.todo.push(value);
   }
   dataObjectUpdated();
 

@@ -100,13 +100,13 @@ body, input, button {
   padding: 15px;
 }
 
-ul.todo {
+ul.home-subpage-lists {
   width: 100%;
-  padding: 1.5rem 0 .5rem 0;
+  padding: 1.5rem 2.5rem .5rem 1.5rem;
   list-style: none;
 }
 
-ul.todo li {
+ul.home-subpage-lists li {
   width: 100%;
   min-height: 50px;
   font-size: 14px;
@@ -123,11 +123,11 @@ ul.todo li {
   word-break: break-word;
 }
 
-ul.todo li:last-of-type {
+ul.home-subpage-lists li:last-of-type {
   margin: 0;
 }
 
-ul.todo li .buttons {
+ul.home-subpage-lists li .buttons {
   width: 100px;
   height: 50px;
 
@@ -136,7 +136,7 @@ ul.todo li .buttons {
   right: 0;
 }
 
-ul.todo li .buttons button {
+ul.home-subpage-lists li .buttons button {
   width: 50px;
   height: 50px;
   float: left;
@@ -150,7 +150,7 @@ ul.todo li .buttons button {
   -moz-appearance: none;
 }
 
-ul.todo li .buttons button:last-of-type:before {
+ul.home-subpage-lists li .buttons button:last-of-type:before {
   content: '';
   width: 1px;
   height: 30px;
@@ -161,7 +161,7 @@ ul.todo li .buttons button:last-of-type:before {
   left: 0;
 }
 
-ul.todo li .buttons button svg {
+ul.home-subpage-lists li .buttons button svg {
   width: 22px;
   height: 22px;
 
@@ -172,56 +172,56 @@ ul.todo li .buttons button svg {
   margin: -11px 0 0 -11px;
 }
 
-ul.todo li .buttons button.complete svg {
+ul.home-subpage-lists li .buttons button.complete svg {
   border-radius: 11px;
   border: 1.5px solid #25b99a;
 
   transition: background 0.2s ease;
 }
 
-ul.todo#completed li .buttons button.complete svg {
+ul.home-subpage-lists#completed li .buttons button.complete svg {
   background: #25b99a;
   border: 0px;
 }
 
-ul.todo:not(#completed) li .buttons button.complete:hover svg {
+ul.home-subpage-lists:not(#completed) li .buttons button.complete:hover svg {
   background: rgba(37, 185, 154, 0.75);
 }
 
-ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+ul.home-subpage-lists:not(#completed) li .buttons button.complete:hover svg .fill {
   fill: #fff;
 }
 
-ul.todo#completed li .buttons button.complete svg .fill {
+ul.home-subpage-lists#completed li .buttons button.complete svg .fill {
   fill: #fff;
 }
 
-ul.todo li .buttons button svg .fill {
+ul.home-subpage-lists li .buttons button svg .fill {
   transition: fill 0.2s ease;
 }
 
-ul.todo li .buttons button.remove svg .fill {
+ul.home-subpage-lists li .buttons button.remove svg .fill {
   fill: #c0cecb;
 }
 
-ul.todo li .buttons button.remove:hover svg .fill {
+ul.home-subpage-lists li .buttons button.remove:hover svg .fill {
   fill: #e85656;
 }
 
-ul.todo li .buttons button.complete svg .fill {
+ul.home-subpage-lists li .buttons button.complete svg .fill {
   fill: #25b99a;
 }
 
-ul.todo#completed {
+ul.home-subpage-lists#completed {
   position: relative;
 }
 
-ul.todo#todo:empty:after {
+ul.home-subpage-lists#todo:empty:after {
   content: 'You have nothing to-do!';
   margin: 0 4.5rem 0 0;
 }
 
-ul.todo#completed:empty:after {
+ul.home-subpage-lists#completed:empty:after {
   content: 'You have yet to complete any tasks.';
   margin: 0 4.5rem 0 0;
 }

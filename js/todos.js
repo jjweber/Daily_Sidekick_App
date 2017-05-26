@@ -1,4 +1,5 @@
 console.log("I am here");
+// To Do's
 
 var toDoData = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')):{
   todo: [],
@@ -20,7 +21,6 @@ document.getElementById('add').addEventListener('click', function() {
   var value = document.getElementById('item').value;
   if (value) {
     addItem(value);
-    console.log(value);
   }
 });
 
@@ -36,7 +36,6 @@ function addItem (value) {
   document.getElementById('item').value = '';
 
   toDoData.todo.push(value);
-  console.log(toDoData);
   dataObjectUpdated();
 }
 

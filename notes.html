@@ -49,7 +49,7 @@
     </nav>
 
 
-    <section id="notesPage" class="container-fluid">
+    <section id="notesPage" class="notePage container-fluid">
 
       <!--/////////////////////////////////////////////-->
       <!-- New Note Section -->
@@ -57,14 +57,16 @@
       <h2>New Notes</h2>
 
       <!-- New note text input -->
-      <form class="" action="" method="post">
+      <form id="noteForm" action="" method="post">
         <label for="inputMessage">Create Message</label>
-        <textarea class="form-control" rows="12" id="inputMessage" name="inputMessage"></textarea>
+        <textarea class="form-control" rows="12" id="inputMessage" name="inputMessage" placeholder="Create New Note Here!"></textarea>
       </form>
 
       <!-- New Note Buttons -->
-      <button id="add" type="submit" class="btn btn-lg btn-success">send</button>
-      <button id="clear" type="submit" class="btn btn-lg btn-danger">clear</button>
+      <div id="noteFormBtns">
+        <button id="add" type="submit" class="btn btn-lg btn-success">save</button>
+        <button id="clear" type="submit" class="btn btn-lg btn-danger">clear</button>
+      </div>
 
       <!--/////////////////////////////////////////////-->
       <!-- Saved Notes List -->
@@ -75,9 +77,7 @@
       <!-- Settings List with icons-->
       <p id="no-notes-message">No current notes</p>
 
-      <ul id="savedNotes">
-        <!--<li>Change Name <span><img class="custom-icon" src="./assets/edit-icon.png" alt="Edit Icon"></span></li>-->
-      </ul>
+      <ul id="savedNotes"></ul>
 
       <!-- Creating empty area to add color and styles -->
       <div class="empty-space"></div>
@@ -92,5 +92,6 @@
   <script src="./js/bootstrap.js"></script>
 
   <script type="text/javascript" src="./js/notes.js"></script>
+
   </body>
 </html>

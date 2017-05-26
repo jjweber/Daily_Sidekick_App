@@ -2,7 +2,15 @@
   margin: 0 auto;
   padding: 0; }
 
-#overview-list-content, #appointment-list-content, #to-do-list-content, #shopping-list-content, #notes-list-content, #contactPage .container-fluid h2, #contactPage .container-fluid h3, #contactPage h3 {
+#homePage,
+#home-appointment-page,
+#home-todo-page,
+#home-shopping-page,
+#home-notes-page, #overview-list-content,
+#appointment-list-content,
+#to-do-list-content,
+#shopping-list-content,
+#notes-list-content, #contactPage .container-fluid h2, #contactPage .container-fluid h3, #contactPage h3 {
   padding-left: 0;
   padding-right: 0; }
 
@@ -12,8 +20,8 @@ html {
 body {
   width: 100%;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -31,16 +39,19 @@ body {
     font-size: 20px; } }
 
 header img {
-  width: 100px;
-  height: 100px; }
+  width: 10rem;
+  height: 10rem; }
+
+h1 {
+  font-size: 30px;
+  font-weight: bold; }
 
 header h1 {
-  font-size: 35px;
-  font-weight: bold;
   text-align: center;
   padding-bottom: 2rem; }
 
 h2 {
+  font-size: 20px;
   background: #4D91BF;
   font-weight: bold;
   padding: 2rem 0; }
@@ -52,27 +63,27 @@ section {
   text-align: center; }
   section h2 {
     color: #FFF;
-    font-size: 30px;
-    margin-left: -15px;
-    margin-right: -15px; }
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
 
 h3 {
-  font-size: 27px;
+  font-size: 18px;
   font-weight: bold; }
 
-@media only screen and (min-width: 460px) {
-  header h1 {
+@media only screen and (min-width: 520px) {
+  h1 {
     font-size: 42px;
     padding-bottom: 1rem; }
+  h2 {
+    font-size: 35px; }
   section h2 {
     font-size: 35px; }
   h3 {
-    font-size: 32px;
-    font-weight: bold; } }
+    font-size: 30px; } }
 
 .custom-icon {
-  width: 50px;
-  height: 50px; }
+  width: 5rem;
+  height: 5rem; }
 
 .readMoreBtn {
   background: #4D91BF;
@@ -82,19 +93,27 @@ h3 {
   text-transform: uppercase;
   width: 100%; }
 
+#loginPage {
+  width: 100%; }
+
 #loginPage h1 {
   color: #000;
   text-transform: uppercase; }
 
 #loginPage img {
-  width: 300px;
-  height: 300px;
-  margin-top: 8rem; }
+  width: 20rem;
+  height: 20rem;
+  margin-top: 4rem; }
 
-#loginPage form input {
-  height: 4rem;
-  font-size: 32px;
-  margin: 2rem 0; }
+#loginPage form {
+  width: 100%; }
+  #loginPage form input {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    border: 2px solid #4D91BF;
+    padding: 1rem;
+    margin: 0 auto; }
 
 #loginPage p {
   color: #4D91BF;
@@ -108,57 +127,106 @@ h3 {
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1em; }
+  padding: 1.5rem; }
 
 #createBtn {
   background: #9C9CA8;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1em; }
+  padding: 1.5rem; }
 
-#login {
-  background: yellow; }
+@media only screen and (min-width: 520px) {
+  #loginPage img {
+    width: 30rem;
+    height: 30rem;
+    margin-top: 8rem; }
+  #loginPage form input {
+    width: 47rem;
+    padding: 1rem;
+    margin: 1rem auto; }
+  #loginPage form #rgstr_btn {
+    width: 47rem;
+    padding: 1.5rem; } }
 
-#homePage {
+#homePage,
+#home-appointment-page,
+#home-todo-page,
+#home-shopping-page,
+#home-notes-page {
   background: #4D91BF;
-  position: relative; }
-  #homePage h1 {
+  position: relative;
+  min-height: calc(100vh - 70px); }
+  #homePage h1,
+  #home-appointment-page h1,
+  #home-todo-page h1,
+  #home-shopping-page h1,
+  #home-notes-page h1 {
     background: #EEE;
     margin-bottom: 0;
     padding: 2rem 0; }
-  #homePage h2 {
+  #homePage h2,
+  #home-appointment-page h2,
+  #home-todo-page h2,
+  #home-shopping-page h2,
+  #home-notes-page h2 {
     margin: 0 0 0 0; }
-  #homePage section input {
+  #homePage section input,
+  #home-appointment-page section input,
+  #home-todo-page section input,
+  #home-shopping-page section input,
+  #home-notes-page section input {
     background: #EEE;
     border-color: #000; }
-
-#homePage input::-webkit-input-placeholder {
-  color: #95989A; }
-
-#homePage input:-ms-input-placeholder {
-  color: #95989A; }
-
-#homePage input::placeholder {
-  color: #95989A; }
+  #homePage input::-webkit-input-placeholder,
+  #home-appointment-page input::-webkit-input-placeholder,
+  #home-todo-page input::-webkit-input-placeholder,
+  #home-shopping-page input::-webkit-input-placeholder,
+  #home-notes-page input::-webkit-input-placeholder {
+    color: #95989A; }
+  #homePage input:-ms-input-placeholder,
+  #home-appointment-page input:-ms-input-placeholder,
+  #home-todo-page input:-ms-input-placeholder,
+  #home-shopping-page input:-ms-input-placeholder,
+  #home-notes-page input:-ms-input-placeholder {
+    color: #95989A; }
+  #homePage input::placeholder,
+  #home-appointment-page input::placeholder,
+  #home-todo-page input::placeholder,
+  #home-shopping-page input::placeholder,
+  #home-notes-page input::placeholder {
+    color: #95989A; }
 
 .jumbotron {
   margin-top: 5rem; }
 
 #all-list-content {
-  float: right;
   border: 2px solid #EEE;
   padding: 0;
   margin: 5rem 0; }
 
 div.remove {
-  margin-top: 15px;
+  margin-top: 1.5rem;
   display: inline-block;
   cursor: pointer;
-  color: red; }
+  color: #CC1600; }
+
+div.edit {
+  margin-top: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: #000; }
 
 @media only screen and (min-width: 768px) {
+  #homePage,
+  #home-appointment-page,
+  #home-todo-page,
+  #home-shopping-page,
+  #home-notes-page {
+    padding-left: 2.5rem;
+    padding-right: 1.5rem; }
   #all-list-content {
+    float: right;
     width: 80%;
     margin: 0 0 5rem 0; } }
 
@@ -176,7 +244,7 @@ div.remove {
   left: 0;
   right: 0;
   width: 100%;
-  margin-right: 20px; }
+  border-bottom: 1px solid #000; }
 
 #side-nav-bar {
   background: #EEE;
@@ -185,58 +253,71 @@ div.remove {
   bottom: 0;
   left: 0;
   width: 20%;
-  margin-right: 20px; }
+  margin-right: 2rem; }
 
 #add-event-btn {
   margin: 2rem auto;
-  background: #4D91BF; }
+  background: #029600; }
 
 #calender-wrapper {
   background: #4D91BF;
   margin-bottom: 5rem; }
 
+#addEventModal {
+  padding: 1.5px; }
+  #addEventModal label {
+    text-align: justify;
+    padding-left: 0;
+    margin-top: 1rem; }
+
 #addEventModal label,
 #addEventModal input {
   display: block; }
-
-#addEventModal .lSideLabel {
-  margin: 0 0 0 0; }
-
-#addEventModal .lSideInput {
-  margin: 0 0 0 0; }
-
-#addEventModal .rSideLabel {
-  margin: 0 0 0 0; }
-
-#addEventModal .rSideInput {
-  margin: 0 0 0 0; }
 
 #addEventModal .add-new-event-btn {
   background: #4D91BF; }
 
 @media only screen and (min-width: 765px) {
   #addEventModal input:not(.different) {
-    margin-top: 12px; } }
+    margin-top: 2px; }
+  #addEventModal label {
+    margin-top: 0; } }
+
+#notesPage {
+  min-height: calc(100vh - 70px); }
+  #notesPage button {
+    text-transform: uppercase; }
 
 #notesPage h2 {
-  margin: 0 0 0 0; }
+  margin: 0 0 1rem 0; }
 
 #notesPage h2:last-of-type {
   margin-top: 1.5rem; }
 
+#notesPage form {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+#noteForm {
+  background: #FFF; }
+
 #inputMessage {
   margin-bottom: 1.5rem; }
 
+#noteFormBtns {
+  background: #FFF; }
+
 #savedNotes {
   width: 100%;
-  margin: -1rem 0 0 -4rem; }
+  margin: 0 0 0 -4rem; }
   #savedNotes li {
-    width: calc(100% + 40px);
+    width: 100%;
     text-transform: capitalize;
     text-align: left;
     list-style: none;
     padding: 2rem 0 2rem 1.5rem;
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid black;
+    word-break: break-word; }
     #savedNotes li span {
       float: right;
       margin: -1rem 1.5rem 0 0; }
@@ -245,8 +326,14 @@ div.remove {
   height: 3rem;
   background: #4D91BF; }
 
+#myAccountPage {
+  min-height: calc(100vh - 70px); }
+
 #myAccountPage h2 {
-  margin: 0 0 0 0; }
+  margin: 0 0 1rem 0; }
+
+#userGreeting {
+  text-transform: capitalize; }
 
 #settingsList {
   width: 100%;
@@ -262,6 +349,40 @@ div.remove {
       float: right;
       margin: -1rem 1.5rem 0 0; }
 
+#usernameEditBtns,
+#passwordEditBtns {
+  display: inline-block; }
+
+.editUsrUn,
+.editUsrPwd {
+  padding: 1.5px; }
+  .editUsrUn .control-label,
+  .editUsrPwd .control-label {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 1rem; }
+
+.editUsrUn label,
+.editUsrPwd label,
+.editUsrUn input,
+.editUsrPwd input {
+  display: block; }
+
+.editUsrUn .add-new-event-btn,
+.editUsrPwd .add-new-event-btn {
+  background: #4D91BF; }
+
+@media only screen and (min-width: 765px) {
+  .editUsrUn,
+  .editUsrPwd {
+    margin-top: 2px; }
+  .editUsrUn .control-label,
+  .editUsrPwd .control-label {
+    margin-top: 0; } }
+
+#contactPage {
+  min-height: calc(100vh - 70px); }
+
 #contactPage .container-fluid h2 {
   width: 100%;
   margin: 0 0 0 0; }
@@ -271,7 +392,7 @@ div.remove {
   margin: 0 0 0 0; }
 
 #contactUs {
-  padding-bottom: 25px; }
+  padding-bottom: 2.5rem; }
   #contactUs p {
     text-align: left;
     margin-top: 1.5rem; }
@@ -284,7 +405,7 @@ div.remove {
 
 #contactPage label, #contactPage input {
   display: block;
-  height: 45px; }
+  height: 4.5rem; }
 
 #contactPage input {
   margin-bottom: 1.5rem; }
@@ -321,9 +442,59 @@ div.remove {
 
 #contactBtns {
   margin: 2rem 0; }
+  #contactBtns button {
+    text-transform: uppercase; }
+
+#signupPage {
+  background: #F2F2F2;
+  width: 100%; }
+
+#backBtn {
+  background: #CC1600;
+  color: #FFF;
+  margin: -70px 0 0 0;
+  float: left;
+  vertical-align: middle; }
+
+#signupPage h1 {
+  color: #000;
+  text-transform: uppercase;
+  margin-top: 10rem; }
+
+#signupPage form {
+  width: 100%;
+  height: calc(100vh - 70px); }
+  #signupPage form input {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    border: 2px solid #4D91BF;
+    padding: 1rem;
+    margin: 1rem auto; }
+
+#rgstr_btn {
+  background: #4D91BF;
+  width: 100%;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem; }
 
 footer {
   text-align: center;
   padding: 2rem 0;
   border-top: 3px solid #000;
-  font-size: 20px; }
+  border-bottom: 3px solid #000;
+  font-size: 15px;
+  height: 70px; }
+
+@media only screen and (min-width: 520px) {
+  #signupPage form input {
+    width: 47rem;
+    padding: 1rem;
+    margin: 1rem auto; }
+  #signupPage form #rgstr_btn {
+    width: 47rem;
+    padding: 1.5rem; }
+  #signupPage form footer {
+    font-size: 20px; } }

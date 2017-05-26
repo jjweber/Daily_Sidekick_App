@@ -13,18 +13,14 @@ renderNotesList();
 document.getElementById('add').addEventListener('click', function() {
   var value = document.getElementById('inputMessage').value;
 
-  console.log("Would add note: ", value);
-
   if (value) {
     addItem(value);
   }
 });
 
-
 document.getElementById('clear').addEventListener('click', function() {
   document.getElementById('inputMessage').value = "";
 });
-
 
 function addItem (value) {
   addItemToDOM(value);
@@ -59,16 +55,10 @@ function dataObjectUpdated() {
 }
 
 function removeItem(obj) {
-  console.log("Item clicked: ", obj);
-
   var listItemToRemove = obj.parentNode;
-
-  console.log("This should be the list item to remove: ", listItemToRemove);
 
   var parent = listItemToRemove.parentNode;
   var value = listItemToRemove.innerText;
-
-  console.log("Will remove this item: ", value);
 
   data.todo.splice(data.todo.indexOf(value), 1);
 
