@@ -45,7 +45,7 @@ function check() {
         // similar behavior as an HTTP redirect
         window.location.replace('home.html');
     }else {
-        alert('Incorrect Login Info. Please try again!');
+        alert('Incorrect Login Credentials.\r\nPlease try again, or create an account if you have not yet done so!');
     }
 }
 
