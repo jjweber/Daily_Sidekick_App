@@ -1,3 +1,7 @@
+body, #afterSuccessContents {
+  margin-left: auto;
+  margin-right: auto; }
+
 #notesPage, #myAccountPage {
   margin: 0 auto;
   padding: 0; }
@@ -18,21 +22,16 @@ html {
   font-size: 62.5%; }
 
 body {
+  background: #FFF;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  margin-left: auto;
-  margin-right: auto;
   font: 1.6rem/1.25 "Helvetica Neue", arial, sans-serif; }
 
 .navbar {
   font-size: 14px; }
-
-@media only screen and (min-width: 826px) {
-  .navbar {
-    font-size: 1px; } }
 
 @media only screen and (min-width: 826px) {
   .navbar {
@@ -122,19 +121,18 @@ h3 {
 #landingPageBtns {
   margin-bottom: 2rem; }
 
-#loginBtn {
-  background: #4D91BF;
+#loginBtn,
+#createBtn {
   color: #FFF;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   padding: 1.5rem; }
 
+#loginBtn {
+  background: #4D91BF; }
+
 #createBtn {
-  background: #9C9CA8;
-  color: #FFF;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem; }
+  background: #9C9CA8; }
 
 @media only screen and (min-width: 520px) {
   #loginPage img {
@@ -162,7 +160,7 @@ h3 {
   #home-todo-page h1,
   #home-shopping-page h1,
   #home-notes-page h1 {
-    background: #EEE;
+    background: #FFF;
     margin-bottom: 0;
     padding: 2rem 0; }
   #homePage h2,
@@ -176,7 +174,7 @@ h3 {
   #home-todo-page section input,
   #home-shopping-page section input,
   #home-notes-page section input {
-    background: #EEE;
+    background: #FFF;
     border-color: #000; }
   #homePage input::-webkit-input-placeholder,
   #home-appointment-page input::-webkit-input-placeholder,
@@ -198,10 +196,10 @@ h3 {
     color: #95989A; }
 
 .jumbotron {
+  background: #FFF;
   margin-top: 5rem; }
 
 #all-list-content {
-  border: 2px solid #EEE;
   padding: 0;
   margin: 5rem 0; }
 
@@ -231,14 +229,14 @@ div.edit {
     margin: 0 0 5rem 0; } }
 
 .listContentContainer {
-  background: #EEE;
+  background: #FFF;
   padding: 0; }
 
 .contentList.container {
   padding: 0 0 5px 0; }
 
 #sm-screen-sub-nav {
-  background: #EEE;
+  background: #FFF;
   position: absolute;
   top: 0;
   left: 0;
@@ -247,7 +245,7 @@ div.edit {
   border-bottom: 1px solid #000; }
 
 #side-nav-bar {
-  background: #EEE;
+  background: #FFF;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -286,7 +284,7 @@ div.edit {
 #notesPage {
   min-height: calc(100vh - 70px); }
   #notesPage button {
-    text-transform: uppercase; }
+    text-transform: capitalize; }
 
 #notesPage h2 {
   margin: 0 0 1rem 0; }
@@ -316,7 +314,7 @@ div.edit {
     text-align: left;
     list-style: none;
     padding: 2rem 0 2rem 1.5rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
     word-break: break-word; }
     #savedNotes li span {
       float: right;
@@ -344,7 +342,7 @@ div.edit {
     text-align: left;
     list-style: none;
     padding: 2rem 0 2rem 1.5rem;
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid #000; }
     #settingsList li span {
       float: right;
       margin: -1rem 1.5rem 0 0; }
@@ -404,35 +402,65 @@ div.edit {
   margin: -4.5rem -1.5rem 1.5rem -1.5rem; }
 
 #contactPage label, #contactPage input {
-  display: block;
-  height: 4.5rem; }
+  display: block; }
 
 #contactPage input {
-  margin-bottom: 1.5rem; }
+  height: 4.5rem; }
 
 #contactPage label {
-  text-align: left; }
+  text-align: left;
+  margin-top: 2rem; }
   #contactPage label span {
-    font-size: 20px;
+    font-size: 15px;
     color: #CC1600; }
 
-#contactPage input:focus:required:invalid {
+#formAfterSuccess {
+  display: none; }
+
+#afterSuccessContents {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 3em;
+  max-width: 100%;
+  background: #F7F7F7;
+  padding: 2em; }
+  #afterSuccessContents img {
+    display: block; }
+  #afterSuccessContents p {
+    clear: both;
+    display: block; }
+  #afterSuccessContents p:first-of-type {
+    margin-top: 1rem; }
+
+#contactPage input:focus:required:invalid,
+#contactPage textarea:focus:required:invalid {
   background: #ffbfbf;
   border-color: #900;
   outline: none; }
 
-#contactPage input:focus:invalid {
+#contactPage input:focus:invalid,
+#contactPage textarea:focus:invalid {
   outline: none; }
 
-#contactPage input:focus:valid {
+#contactPage input:focus:valid,
+#contactPage textarea:focus:valid {
   background: #dff0d8;
   border-color: #2ecc71; }
 
-#contactPage input:valid {
+#contactPage input:valid,
+#contactPage textarea:valid {
   border-color: #2ecc71;
   background-color: #dff0d8; }
 
-#contactPage input:focus:valid {
+#contactPage input:focus:valid,
+#contactPage textarea:focus:valid {
   outline: none; }
 
 .error {
@@ -441,9 +469,9 @@ div.edit {
   margin: 5px auto; }
 
 #contactBtns {
-  margin: 2rem 0; }
+  margin-top: 6.3rem; }
   #contactBtns button {
-    text-transform: uppercase; }
+    text-transform: capitalize; }
 
 #signupPage {
   background: #F2F2F2;
@@ -476,7 +504,7 @@ div.edit {
   background: #4D91BF;
   width: 100%;
   color: #FFF;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   padding: 1.5rem; }
 

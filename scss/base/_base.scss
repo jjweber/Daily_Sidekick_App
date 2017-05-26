@@ -1,12 +1,12 @@
 html { font-size: 62.5%; }
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  background: $secondary-color;
+  width: $full-size;
+  height: $full-size;
+  margin: $reset-space;
+  padding: $reset-space;
   overflow-x: hidden;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %auto-center;
   font: 1.6rem/1.25 $font-stack;
 }
 
@@ -16,12 +16,6 @@ body {
 ////////////////
 .navbar {
   font-size: 14px;
-}
-
-@media only screen and (min-width : 826px) {
-  .navbar {
-    font-size: 1px;
-  }
 }
 
 @media only screen and (min-width : 826px) {
@@ -50,7 +44,7 @@ header h1 {
 
 h2 {
   font-size: 20px;
-  background: #4D91BF;
+  background: $accent-background;
   font-weight: bold;
   padding: 2rem 0;
 }
@@ -63,7 +57,7 @@ section {
   text-align: center;
 
   h2 {
-    color: #FFF;
+    color: $secondary-color;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
   }
@@ -103,23 +97,23 @@ h3 {
 }
 
 .readMoreBtn {
-  background: #4D91BF;
-  color: #FFF;
+  background: $accent-background;
+  color: $secondary-color;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  width: 100%;
+  width: $full-size;
 }
 
 ////////////////////////////
 // Index.html Page Styles //
 ////////////////////////////
 #loginPage {
-  width: 100%;
+  width: $full-size;
 }
 
 #loginPage h1 {
- color: #000;
+ color: $primary-color;
  text-transform: uppercase;
 }
 
@@ -130,20 +124,20 @@ h3 {
 }
 
 #loginPage form {
-  width: 100%;
+  width: $full-size;
 
   input {
     display: block;
-    width: 100%;
+    width: $full-size;
     height: 5rem;
-    border: 2px solid #4D91BF;
+    border: 2px solid $accent-background;
     padding: 1rem;
     margin: 0 auto;
   }
 }
 
 #loginPage p {
-  color: #4D91BF;
+  color: $accent-background;
   margin: 2rem 0;
 }
 
@@ -151,20 +145,20 @@ h3 {
   margin-bottom: 2rem;
 }
 
-#loginBtn {
-  background: #4D91BF;
-  color: #FFF;
-  text-transform: uppercase;
+#loginBtn,
+#createBtn {
+  color: $secondary-color;
+  text-transform: capitalize;
   text-decoration: none;
   padding: 1.5rem;
 }
 
+#loginBtn {
+  background: $accent-background;
+}
+
 #createBtn {
   background: #9C9CA8;
-  color: #FFF;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem;
 }
 
 @media only screen and (min-width : 520px) {
@@ -196,13 +190,13 @@ h3 {
 #home-todo-page,
 #home-shopping-page,
 #home-notes-page {
-  background: #4D91BF;
+  background: $accent-background;
   position: relative;
   @extend %remove-bootstrap-side-padding;
   min-height: calc(100vh - 70px);
 
   h1 {
-    background: #EEE;
+    background: $secondary-color;
     margin-bottom: 0;
     padding: 2rem 0;
   }
@@ -212,8 +206,8 @@ h3 {
   }
 
   section input {
-    background: #EEE;
-    border-color: #000;
+    background: $secondary-color;
+    border-color: $primary-color;
   }
 
   input::placeholder {
@@ -222,11 +216,11 @@ h3 {
 }
 
 .jumbotron {
+  background: $secondary-color;
   margin-top: 5rem;
 }
 
 #all-list-content {
-  border: 2px solid #EEE;
   padding: 0;
   margin: 5rem 0;
 }
@@ -242,7 +236,7 @@ div.edit {
   margin-top: 1.5rem;
   display: inline-block;
   cursor: pointer;
-  color: #000;
+  color: $primary-color;
 }
 
 @media only screen and (min-width : 768px) {
@@ -263,7 +257,7 @@ div.edit {
 }
 
 .listContentContainer {
-  background: #EEE;
+  background: $secondary-color;
   padding: 0;
 }
 
@@ -280,17 +274,17 @@ div.edit {
 }
 
 #sm-screen-sub-nav {
-  background: #EEE;
+  background: $secondary-color;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  border-bottom: 1px solid #000;
+  width: $full-size;
+  border-bottom: 1px solid $primary-color;
 }
 
 #side-nav-bar {
-  background: #EEE;
+  background: $secondary-color;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -308,7 +302,7 @@ div.edit {
 }
 
 #calender-wrapper {
-  background: #4D91BF;
+  background: $accent-background;
   margin-bottom: 5rem;
 }
 
@@ -328,7 +322,7 @@ div.edit {
 }
 
 #addEventModal .add-new-event-btn {
-  background: #4D91BF;
+  background: $accent-background;
 }
 
 @media only screen and (min-width : 765px) {
@@ -350,7 +344,7 @@ div.edit {
 
 
   button {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 }
 
@@ -368,7 +362,7 @@ div.edit {
 }
 
 #noteForm {
-  background: #FFF;
+  background: $secondary-color;
 }
 
 #inputMessage {
@@ -376,20 +370,20 @@ div.edit {
 }
 
 #noteFormBtns {
-  background: #FFF;
+  background: $secondary-color;
 }
 
 #savedNotes {
-  width: 100%;
+  width: $full-size;
   margin: 0 0 0 -4rem;
 
   li {
-    width: 100%;
+    width: $full-size;
     text-transform: capitalize;
     text-align: left;
     list-style: none;
     padding: 2rem 0 2rem 1.5rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $primary-color;
     word-break: break-word;
 
     span {
@@ -401,7 +395,7 @@ div.edit {
 
 #notesPage .empty-space {
   height: 3rem;
-  background: #4D91BF;
+  background: $accent-background;
 }
 ////////////////////////////////
 // MyAccount.html Page Styles //
@@ -420,7 +414,7 @@ div.edit {
 }
 
 #settingsList {
-  width: 100%;
+  width: $full-size;
   margin: -1rem 0 6rem -4rem;
 
   li {
@@ -429,7 +423,7 @@ div.edit {
     text-align: left;
     list-style: none;
     padding: 2rem 0 2rem 1.5rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $primary-color;
 
     span {
       float: right;
@@ -463,7 +457,7 @@ div.edit {
 
 .editUsrUn .add-new-event-btn,
 .editUsrPwd .add-new-event-btn {
-  background: #4D91BF;
+  background: $accent-background;
 }
 
 @media only screen and (min-width : 765px) {
@@ -486,13 +480,13 @@ div.edit {
 }
 
 #contactPage .container-fluid h2 {
-  width: 100%;
+  width: $full-size;
   margin: 0 0 0 0;
   @extend %remove-bootstrap-side-padding;
 }
 
 #contactPage .container-fluid h3 {
-  width: 100%;
+  width: $full-size;
   margin: 0 0 0 0;
   @extend %remove-bootstrap-side-padding;
 }
@@ -507,8 +501,8 @@ div.edit {
 }
 
 #contactPage h3 {
-  background: #4D91BF;
-  color: #FFF;
+  background: $accent-background;
+  color: $secondary-color;
   padding: 2rem 0;
   margin: -4.5rem -1.5rem 1.5rem -1.5rem;
   @extend %remove-bootstrap-side-padding;
@@ -516,48 +510,82 @@ div.edit {
 
 #contactPage label, #contactPage input {
   display: block;
-  height: 4.5rem;
 }
 
 #contactPage input {
-  margin-bottom: 1.5rem;
+  //margin-bottom: 1.5rem;
+  height: 4.5rem;
 }
 
 #contactPage label {
   text-align: left;
+  margin-top: 2rem;
 
   span {
-    font-size: 20px;
+    font-size: 15px;
     color: #CC1600;
   }
 }
 
+#formAfterSuccess {
+  display: none;
+}
+
+#afterSuccessContents {
+  @extend %auto-center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+  max-width: $full-size;
+  background: $form-background;
+  padding: 2em;
+
+  img {
+    display: block;
+  }
+
+  p {
+    clear: both;
+    display: block;
+  }
+
+  p:first-of-type {
+    margin-top: 1rem;
+  }
+}
 ////////////////////////////////////////
 // This style is for the valid fields //
 ////////////////////////////////////////
-#contactPage input:focus:required:invalid {
+
+#contactPage input:focus:required:invalid,
+#contactPage textarea:focus:required:invalid {
   background: #ffbfbf;
   border-color: #900;
   outline: none;
 }
 
-#contactPage input:focus:invalid {
+#contactPage input:focus:invalid,
+#contactPage textarea:focus:invalid {
   outline: none;
 }
 
-#contactPage input:focus:valid {
+#contactPage input:focus:valid,
+#contactPage textarea:focus:valid {
   background: #dff0d8;
   border-color: #2ecc71;
 }
 
-#contactPage input:valid
-{
+#contactPage input:valid,
+#contactPage textarea:valid {
   border-color: #2ecc71;
   background-color: #dff0d8;
 }
 
-#contactPage input:focus:valid
-{
+#contactPage input:focus:valid,
+#contactPage textarea:focus:valid {
   outline: none;
 }
 
@@ -568,10 +596,10 @@ div.edit {
 }
 
 #contactBtns {
-  margin: 2rem 0;
+  margin-top: 6.3rem;
 
   button {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 }
 
@@ -580,42 +608,42 @@ div.edit {
 ////////////////////////
 #signupPage {
   background: #F2F2F2;
-  width: 100%;
+  width: $full-size;
 }
 
 #backBtn {
   background: #CC1600;
-  color: #FFF;
+  color: $secondary-color;
   margin: -70px 0 0 0;
   float: left;
   vertical-align: middle;
 }
 
 #signupPage h1 {
- color: #000;
+ color: $primary-color;
  text-transform: uppercase;
  margin-top: 10rem;
 }
 
 #signupPage form {
-  width: 100%;
+  width: $full-size;
   height: calc(100vh - 70px);
 
   input {
     display: block;
-    width: 100%;
+    width: $full-size;
     height: 5rem;
-    border: 2px solid #4D91BF;
+    border: 2px solid $accent-background;
     padding: 1rem;
     margin: 1rem auto;
   }
 }
 
 #rgstr_btn {
-  background: #4D91BF;
-  width: 100%;
-  color: #FFF;
-  text-transform: uppercase;
+  background: $accent-background;
+  width: $full-size;
+  color: $secondary-color;
+  text-transform: capitalize;
   text-decoration: none;
   padding: 1.5rem;
 }
@@ -626,8 +654,8 @@ div.edit {
 footer {
   text-align: center;
   padding: 2rem 0;
-  border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
+  border-top: 3px solid $primary-color;
+  border-bottom: 3px solid $primary-color;
   font-size: 15px;
   height: 70px;
 }

@@ -69,35 +69,43 @@
       <h2>Message Form</h2>
       <h3>(Leave us a message and we will get back to you!)</h3>
 
-      <!-- Form Inputs and Submit Form Button -->
-      <form id="contactForm">
-        <div class="form-group row">
-          <div class="col-sm-12 col-md-6">
-            <label for="inputName">Name <span>*required</span></label>
-            <input type="text" class="form-control" id="inputName" placeholder="e.g. Joe..." required pattern="[a-zA-Z]+" minlength="3">
+      <div id="formBeforeSuccess">
+        <!-- Form Inputs and Submit Form Button -->
+        <form id="contactForm">
+          <div class="form-group row">
+            <div class="col-sm-12 col-md-6">
+              <label for="inputName">Name <span>*required</span></label>
+              <input type="text" class="form-control" id="inputName" placeholder="e.g. Joe..." required pattern="[a-zA-Z]+" minlength="3">
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="inputEmail">Email <span>*required</span></label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="e.g. joemighty@gmail.com..." required>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6">
-            <label for="inputEmail">Email <span>*required</span></label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="e.g. joemighty@gmail.com..." required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-12 col-md-6">
-            <label for="inputMessage">Message <span>*required</span></label>
-            <textarea class="form-control" rows="3" name="inputMessage"></textarea>
-
+          <div class="form-group row">
+            <div class="col-sm-12 col-md-6">
+              <label for="formMessage">Message <span>*required</span></label>
+              <textarea class="form-control" id="formMessage" rows="3" name="formMessage" required minlength="3"></textarea>
+            </div>
             <div id="contactBtns"class="col-sm-12 col-md-6">
 
                 <!-- Send Button -->
-                <button type="submit" class="btn btn-lg btn-success">send</button>
+                <button id="sendBtn" type="submit" class="btn btn-lg btn-success">send</button>
 
                 <!-- Clear Button -->
-                <button id="clearBtn" type="button" class="btn btn-lg btn-danger">clear</button>
+                <button id="clearBtn" type="button" class="btn btn-lg btn-danger" onclick="resetform()">clear</button>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
 
+      <div id="formAfterSuccess">
+        <div id="afterSuccessContents">
+          <img src="./assets/circle-check.svg" alt="Circle with check icon">
+          <p>Awesome! You're message has been sent.</p>
+          <p>We will reply as soon as possible.</p>
+        </div>
+      </div>
     </section>
     <footer>
       <p>Built by Justin Weber for Project and Portfolio IV Class.</p>
@@ -106,6 +114,6 @@
   <script src="./js/jquery-3.2.1.js"></script>
   <script src="./js/bootstrap.js"></script>
 
-  <!--<script type="text/javascript" src="./js/main.js"></script>-->
+  <script type="text/javascript" src="./js/contact-form.js"></script>
   </body>
 </html>
